@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Case</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Case ID: {{ case.id }}</h1>
+    <p><strong>Title:</strong> {{ case.title }}</p>
+    <p><strong>Severity:</strong> {{ case.severity }}</p>
+    <p><strong>IP Addresses:</strong> {{ case.ip_addresses }}</p>
+    <p><strong>Username:</strong> {{ case.username }}</p>
+    <p><strong>File Name:</strong> {{ case.file_name }}</p>
+    <form method="POST">
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" rows="5">{{ case.description }}</textarea>
+        <button type="submit">Save</button>
+    </form>
+    <a href="/ui/cases">Back to Cases List</a>
+</body>
+</html>
