@@ -79,10 +79,10 @@ def create_case(incident_data, flask_api_url):
 
 
 def main():
-    username = "xzgfXgwroJBGGt6Q"
-    password = ""
+    username = "its"
+    password = "xzgfXgwroJBGGt6Q" # Correct password
     flask_api_url = "http://127.0.0.1:5000/api/cases" # Endpoint where we create the cases
-    incidents = fetch_incidents(username, password)
+    incidents = fetch_incidents(username, password) # Use correct credentials
 
     if incidents:
         if isinstance(incidents, list):
